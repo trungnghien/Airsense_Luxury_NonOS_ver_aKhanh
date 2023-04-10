@@ -1,0 +1,15 @@
+knolleary/PubSubClient@^2.8
+bblanchon/ArduinoJson@^6.17.2
+https://github.com/DFRobot/DFRobot_OzoneSensor.git
+seithan/Easy Nextion Library@^1.0.6
+sensirion/arduino-sht@^1.2.2
+jdollar/SoftwareSerialEsp32@0.0.0-alpha+sha.6d373ecd5f
+https://github.com/RobTillaart/SHT85.git
+adafruit/Adafruit BusIO@^1.13.2
+https://github.com/tzapu/WiFiManager.git
+finitespace/BME280@^3.0.0
+marian-craciunescu/ESP32Ping@^1.7
+adafruit/RTClib@^2.1.1
+https://github.com/Erriez/ErriezMHZ19B.git
+arduino-libraries/NTPClient@^3.2.1
+https://github.com/jmstriegel/Plantower_PMS7003.git
