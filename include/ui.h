@@ -61,7 +61,7 @@ ERROR_CODE Screen_init(HardwareSerial& _stream, const uint32_t _baudRate_u32, co
 {
 	myNex.begin(_baudRate_u32);		// khoi dong man hinh Nextion 
 
-	if (_stream.available() && EEPROM.begin(_romSize_u32))		// kiem tra ket noi voi man hinh va khoi dong EEPROM cua man hinh Nextion
+	if (EEPROM.begin(_romSize_u32))		// kiem tra ket noi voi man hinh va khoi dong EEPROM cua man hinh Nextion
 	{
 		log_e("Nextion screen initialize successfully!");
 		return ERROR_NONE;
@@ -265,7 +265,7 @@ ERROR_CODE Screen_displaysensorData(struct sensorData *_sensorData_st, struct ca
 {
 	if (SCREEN_SERIAL_PORT.available())
 	{
-		myNex.writeStr("dl.temc.txt"   , String(_sensorData_st->temperature * _calibData->temperature_calibA + _calibData->humidity_calibB, 1U));
+		myNex.writeStr("dl.temc.txt"   , String(_sensorData_st->temperature * _calibData->temperature_calibA + _calibData->temperature_calibB, 1U));
 		myNex.writeStr("dl.hum.txt"    , String(_sensorData_st->humidity * _calibData->humidity_calibA + _calibData->humidity_calibB, 1U));
 
 		myNex.writeNum("dl.nppb.val"   , _sensorData_st->o3_ppb);					// ghi gia tri O3 thoe don vi ppm ra man hinh 

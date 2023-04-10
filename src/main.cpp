@@ -58,6 +58,7 @@ void setup() {
 #endif
   Screen_init(Serial2, 9600, 512);
     log_e("Init Done");
+  Screen_updateStatus(&connectionStatus_st);
 }
 
 unsigned long last_send = 0;
